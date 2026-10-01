@@ -2,30 +2,19 @@
 
 int main(void)
 {
-    int num1, num2;
-    char op;
+    int number;
+    int sum = 0;
+    int i;
 
-    printf("Enter the calculation: ");
-    scanf("%d %c %d", &num1, &op, &num2);
+    printf("Enter a number: ");
+    scanf("%d", &number);
 
-    switch (op)
+    for (i = 1; i <= number; i++)
     {
-        case '+':
-            printf("%d + %d = %d\n", num1, num2, num1 + num2);
-            break;
-
-        case '-':
-            printf("%d - %d = %d\n", num1, num2, num1 - num2);
-            break;
-
-        case '*':
-            printf("%d * %d = %d\n", num1, num2, num1 * num2);
-            break;
-
-        case '/':
-            printf("%d / %d = %d\n", num1, num2, num1 / num2);
-            break;
+        sum = sum + i;
     }
+
+    printf("The result is %d\n", sum);
 
     return 0;
 }
